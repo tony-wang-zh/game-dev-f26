@@ -37,7 +37,7 @@ Note on randomness: add "seed" option at beginning to seed all randomness in gam
 
 ### 1. Resolve submission shape and scope
 
-- the exact GitHub login and use the course-required final path is under `midterm/tony-wang-zh/`. Preserve this plan and useful starter material while preparing the final folder.
+- the exact GitHub login and use the course-required final path is under `midterms/tony-wang-zh/`. Preserve this plan and useful starter material while preparing the final folder.
 - Write the scope statement, episode boundaries, initial state, actions, transitions, outcomes, and episode limit.
 - Draft the three evaluation situations before prompt tuning; select distinct starting situations/seeds and reserve at least one as held out.
 - Create a rule/source map with locators and evidence labels (`code`, `manual`, `observed`, `assumed`, `design`). Credit the original game and all reused assets/material and state reuse terms.

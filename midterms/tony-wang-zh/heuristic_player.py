@@ -37,7 +37,9 @@ class HeuristicPlayer:
         if phase == "shoot":
             return {"type": "shoot", "text": legal_actions[0]["word"]}
         if phase == "ration":
-            return {"type": "eat", "level": 2}
+            ration_actions = [a for a in legal_actions if a.get("type") == "eat"]
+            return next((a for a in ration_actions if a.get("level") == 2),
+                        ration_actions[0])
         if phase == "event_response":
             return {"type": "rider_response", "choice": "stand_ground"}
         raise ValueError(f"no policy for phase {phase!r}")

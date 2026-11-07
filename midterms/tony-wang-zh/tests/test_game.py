@@ -1,9 +1,10 @@
+import json
 import tempfile
 import time
 import unittest
 from pathlib import Path
 
-from game import OregonTrailGame, PLAYER_ID
+from game import FORT_ITEMS, OregonTrailGame, PLAYER_ID
 
 
 def start_game(game):
@@ -69,7 +70,27 @@ class OregonTrailGameTests(unittest.TestCase):
                 game.step(PLAYER_ID, legal[0])
         self.assertLessEqual(game.outcome()["turn"], 10)
         self.assertEqual(game.outcome()["status"], "terminal")
-        self.assertIn(game.outcome()["reason"], {"arrived at Oregon City", "lost on the trail", "ten-turn limit"})
+        self.assertIn(game.outcome()["reason"], {
+            "arrived at Oregon City", "lost on the trail", "travel-turn limit (10 turns)"
+        })
+
+    def test_custom_turn_limit_is_named_in_terminal_reason(self):
+        game = OregonTrailGame(seed=1, max_turns=2)
+        start_game(game)
+        for _ in range(2):
+            game.step(PLAYER_ID, {"type": "continue"})
+            game.step(PLAYER_ID, {"type": "eat", "level": 2})
+        self.assertEqual(game.outcome()["reason"], "travel-turn limit (2 turns)")
+
+        rider_game = OregonTrailGame(seed=1, max_turns=2)
+        rider_game.state.phase = "event_response"
+        rider_game.state.turn = 2
+        rider_game.state.miles = 400
+        rider_game.state.active_event = "riders"
+        self.assertTrue(rider_game.step(PLAYER_ID, {
+            "type": "rider_response", "choice": "stand_ground"
+        })["accepted"])
+        self.assertEqual(rider_game.outcome()["reason"], "travel-turn limit (2 turns)")
 
     def test_heuristic_acceptance_trace_reaches_oregon_city(self):
         from heuristic_player import HeuristicPlayer
@@ -170,6 +191,60 @@ class OregonTrailGameTests(unittest.TestCase):
             self.assertEqual(loaded.state.elapsed_seconds, 17.5)
             path.write_text('{"version": 999, "state": {}}', encoding="utf-8")
             with self.assertRaises(ValueError):
+                OregonTrailGame.load_state(path)
+
+    def test_save_load_after_completed_initial_and_fort_purchases(self):
+        game = OregonTrailGame(seed=12)
+        start_game(game)
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "save.json"
+            game.save_state(path)
+            loaded = OregonTrailGame.load_state(path)
+            self.assertEqual(loaded.observe(PLAYER_ID), game.observe(PLAYER_ID))
+
+            game.step(PLAYER_ID, {"type": "visit_fort"})
+            while game.observe(PLAYER_ID)["phase"] == "fort_purchase":
+                item = game.legal_actions(PLAYER_ID)[0]["item"]
+                game.step(PLAYER_ID, {"type": "buy", "item": item, "amount": 0})
+            game.save_state(path)
+            loaded = OregonTrailGame.load_state(path)
+            self.assertEqual(loaded.observe(PLAYER_ID), game.observe(PLAYER_ID))
+            self.assertEqual(loaded.state.fort_index, len(FORT_ITEMS))
+
+    def test_save_load_rejects_incomplete_purchases_in_travel_phase(self):
+        game = OregonTrailGame(seed=12)
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "save.json"
+            game.save_state(path)
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            payload["state"]["phase"] = "travel"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "purchase"):
+                OregonTrailGame.load_state(path)
+
+            ended_during_purchase = OregonTrailGame(seed=12)
+            ended_during_purchase.step(PLAYER_ID, {"type": "invalid"})
+            ended_during_purchase.step(PLAYER_ID, {"type": "invalid"})
+            ended_during_purchase.save_state(path)
+            loaded = OregonTrailGame.load_state(path)
+            self.assertEqual(loaded.outcome()["status"], "terminal")
+            self.assertEqual(loaded.state.purchase_index, 0)
+
+    def test_save_load_rejects_phase_status_mismatch(self):
+        game = OregonTrailGame(seed=12)
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "save.json"
+            game.save_state(path)
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            payload["state"]["phase"] = "terminal"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "phase and status"):
+                OregonTrailGame.load_state(path)
+
+            payload["state"]["phase"] = "initial_purchase"
+            payload["state"]["status"] = "terminal"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "phase and status"):
                 OregonTrailGame.load_state(path)
 
     def test_all_legal_actions_are_structured_and_episode_is_bounded(self):

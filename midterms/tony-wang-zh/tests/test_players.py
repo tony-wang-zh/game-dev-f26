@@ -27,6 +27,17 @@ class PlayerTests(unittest.TestCase):
         action = player.choose(game.observe(PLAYER_ID), game.legal_actions(PLAYER_ID))
         self.assertEqual(action, {"type": "buy", "item": "oxen", "amount": 250})
 
+    def test_heuristic_chooses_a_legal_ration_when_food_is_low(self):
+        game = OregonTrailGame(seed=2)
+        game.state.phase = "ration"
+        game.state.food = 15
+        observation = game.observe(PLAYER_ID)
+        legal_actions = game.legal_actions(PLAYER_ID)
+        action = HeuristicPlayer().choose(observation, legal_actions)
+        self.assertIn(action, legal_actions)
+        self.assertEqual(action["level"], 1)
+        self.assertTrue(game.step(PLAYER_ID, action)["accepted"])
+
     def test_vertex_prompt_contains_only_observation_and_legal_action_boundary(self):
         response = SimpleNamespace(text='{"type":"buy","item":"oxen","amount":250}',
                                    usage_metadata=SimpleNamespace(prompt_token_count=12,

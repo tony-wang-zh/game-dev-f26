@@ -47,7 +47,7 @@ map is `rule-source-map.md`.
 - The deterministic tests cover purchase accounting, legal and refused
   actions, saves, seeded state, score, successful arrival, episode limits,
   player boundary, a replayed-model evaluation path, and the result-message
-  regression. Command (from `midterm/tony-wang-zh/`):
+  regression. Command (from `midterms/tony-wang-zh/`):
   `uv run --frozen python -m unittest discover -s tests -v`.
 - `observe` returns player-visible progress/resources and only a revealed
   event. `legal_actions` contains the currently visible choices and bounded
@@ -79,4 +79,31 @@ map is `rule-source-map.md`.
 - The game is fully observable at each decision. The player is stateless and
   receives the current resource totals, progress, phase, current result, and
   revealed encounter; the hidden seeded future event sequence is not exposed.
+
+## Follow-up from independent functional review
+
+The reviewer reported three reproducible issues in `REVIEW_FINDINGS.md`:
+
+- Save validation rejected completed purchase indices even when the game had
+  advanced beyond that purchase phase. `test_save_load_after_completed_initial_and_fort_purchases`
+  failed before the fix and now covers saves at both phase boundaries.
+- The heuristic always chose ration level 2, which is unavailable with 13–17
+  food. `test_heuristic_chooses_a_legal_ration_when_food_is_low` failed before
+  the fix; the heuristic now selects level 2 when offered and otherwise picks
+  an offered ration. The test verifies the action is accepted.
+- Custom turn limits ended with the hard-coded reason `ten-turn limit`.
+  `test_custom_turn_limit_is_named_in_terminal_reason` failed before the fix;
+  terminal reasons now report the configured travel-turn limit.
+
+The independent follow-up found two additional gaps: validation did not reject
+unfinished initial purchases in an active post-purchase phase, and custom-turn
+limit coverage did not exercise the rider-response termination path. The
+loader now rejects those impossible active states while still allowing a
+terminal save made during initial purchases. The turn-limit test covers both
+ration and rider-response termination. A further review found that a forged
+save could pair a terminal phase with ongoing status (or vice versa); the
+loader now rejects either mismatch, with both cases covered by
+`test_save_load_rejects_phase_status_mismatch`. The rule/source map was updated
+for these cases. All 29 deterministic tests pass; final reviewer confirmation
+is pending.
 

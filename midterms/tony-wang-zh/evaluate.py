@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent
 def _episode(player, seed: int, limits: dict, live: bool,
              trace_directory: Path | None = None) -> dict:
     game = OregonTrailGame(seed=seed, max_turns=limits["step_limit_travel_turns"])
-    trace = TraceLog(player.name, trace_directory or ROOT / "traces", GAME_VERSION)
+    trace = TraceLog(player.name, trace_directory or ROOT / "evaluation_runs_traces", GAME_VERSION)
     started = time.monotonic()
     deadline = started + limits["episode_time_limit_seconds"]
     failure = None

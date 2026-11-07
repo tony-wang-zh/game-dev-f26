@@ -42,7 +42,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0
       },
-      "trace": "traces/20261107T190137Z-heuristic-b49e2d12.json"
+      "trace": "evaluation_runs_traces/20261107T190137Z-heuristic-b49e2d12.json"
     },
     {
       "case": "mostly-clear",
@@ -72,7 +72,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0026843
       },
-      "trace": "traces/20261107T190137Z-vertex-f6e23a33.json"
+      "trace": "evaluation_runs_traces/20261107T190137Z-vertex-f6e23a33.json"
     },
     {
       "case": "mostly-clear",
@@ -102,7 +102,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0
       },
-      "trace": "traces/20261107T190201Z-heuristic-69d65c3c.json"
+      "trace": "evaluation_runs_traces/20261107T190201Z-heuristic-69d65c3c.json"
     },
     {
       "case": "mostly-clear",
@@ -132,7 +132,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0023916
       },
-      "trace": "traces/20261107T190201Z-vertex-f0865bdc.json"
+      "trace": "evaluation_runs_traces/20261107T190201Z-vertex-f0865bdc.json"
     },
     {
       "case": "mixed-events",
@@ -162,7 +162,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0
       },
-      "trace": "traces/20261107T190222Z-heuristic-8d1ab7b6.json"
+      "trace": "evaluation_runs_traces/20261107T190222Z-heuristic-8d1ab7b6.json"
     },
     {
       "case": "mixed-events",
@@ -192,7 +192,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0026902
       },
-      "trace": "traces/20261107T190222Z-vertex-b68c0b41.json"
+      "trace": "evaluation_runs_traces/20261107T190222Z-vertex-b68c0b41.json"
     },
     {
       "case": "mixed-events",
@@ -222,7 +222,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0
       },
-      "trace": "traces/20261107T190243Z-heuristic-6f8acfab.json"
+      "trace": "evaluation_runs_traces/20261107T190243Z-heuristic-6f8acfab.json"
     },
     {
       "case": "mixed-events",
@@ -252,7 +252,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0024889
       },
-      "trace": "traces/20261107T190243Z-vertex-77e4596a.json"
+      "trace": "evaluation_runs_traces/20261107T190243Z-vertex-77e4596a.json"
     },
     {
       "case": "rider-heavy",
@@ -282,7 +282,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0
       },
-      "trace": "traces/20261107T190304Z-heuristic-92301687.json"
+      "trace": "evaluation_runs_traces/20261107T190304Z-heuristic-92301687.json"
     },
     {
       "case": "rider-heavy",
@@ -312,7 +312,7 @@
         "failure": null,
         "estimated_cost_usd": 0.00238225
       },
-      "trace": "traces/20261107T190304Z-vertex-70e664ad.json"
+      "trace": "evaluation_runs_traces/20261107T190304Z-vertex-70e664ad.json"
     },
     {
       "case": "rider-heavy",
@@ -342,7 +342,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0
       },
-      "trace": "traces/20261107T190324Z-heuristic-86f4e24f.json"
+      "trace": "evaluation_runs_traces/20261107T190324Z-heuristic-86f4e24f.json"
     },
     {
       "case": "rider-heavy",
@@ -372,7 +372,7 @@
         "failure": null,
         "estimated_cost_usd": 0.0026779
       },
-      "trace": "traces/20261107T190324Z-vertex-e23d2962.json"
+      "trace": "evaluation_runs_traces/20261107T190324Z-vertex-e23d2962.json"
     }
   ]
 }

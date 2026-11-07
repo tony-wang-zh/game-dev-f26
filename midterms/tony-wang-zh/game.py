@@ -310,7 +310,7 @@ class OregonTrailGame:
                 s.miles = 2040
                 self._terminal("arrived at Oregon City")
             elif s.turn >= self.max_turns:
-                self._terminal("ten-turn limit")
+                self._terminal(self._turn_limit_reason())
             else:
                 s.phase = "travel"
         return None
@@ -361,7 +361,7 @@ class OregonTrailGame:
         if s.miles >= 2040:
             self._terminal("arrived at Oregon City")
         elif s.turn >= self.max_turns:
-            self._terminal("ten-turn limit")
+            self._terminal(self._turn_limit_reason())
         else:
             s.phase = "travel"
         return None
@@ -372,6 +372,9 @@ class OregonTrailGame:
         s.reason = reason
         s.score = round(max(0, min(1, s.miles / 2040)), 3)
         s.phase = "terminal"
+
+    def _turn_limit_reason(self) -> str:
+        return f"travel-turn limit ({self.max_turns} turns)"
 
     def end_episode(self, reason: str) -> None:
         """Runner-enforced budget termination, recorded as an explicit outcome."""
@@ -420,12 +423,23 @@ class OregonTrailGame:
             if (min(state.cash, state.oxen, state.food, state.bullets, state.clothing,
                     state.supplies, state.miles, state.elapsed_seconds) < 0):
                 raise ValueError("invalid saved resource or turn value")
-            if not 0 <= state.purchase_index < len(PURCHASE_ITEMS):
+            if not 0 <= state.purchase_index <= len(PURCHASE_ITEMS):
                 raise ValueError("invalid saved purchase index")
-            if not 0 <= state.fort_index < len(FORT_ITEMS):
+            if (state.phase == "initial_purchase"
+                    and state.purchase_index >= len(PURCHASE_ITEMS)):
+                raise ValueError("invalid saved purchase index for purchase phase")
+            if (state.phase not in {"initial_purchase", "terminal"}
+                    and state.purchase_index != len(PURCHASE_ITEMS)):
+                raise ValueError("incomplete saved purchases after purchase phase")
+            if not 0 <= state.fort_index <= len(FORT_ITEMS):
                 raise ValueError("invalid saved fort index")
+            if (state.phase == "fort_purchase"
+                    and state.fort_index >= len(FORT_ITEMS)):
+                raise ValueError("invalid saved fort index for fort purchase phase")
             if state.status not in {"ongoing", "terminal"}:
                 raise ValueError("invalid saved outcome status")
+            if (state.phase == "terminal") != (state.status == "terminal"):
+                raise ValueError("saved phase and status are inconsistent")
             if (state.shoot_started_at is not None
                     and not isinstance(state.shoot_started_at, (int, float))):
                 raise ValueError("invalid saved shooting timer")
