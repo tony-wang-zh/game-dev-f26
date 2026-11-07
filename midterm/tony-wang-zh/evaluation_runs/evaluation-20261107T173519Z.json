@@ -1,0 +1,366 @@
+{
+  "run_at": "2026-11-07T17:35:19.705875+00:00",
+  "game_version": "0.2.0",
+  "suite_declared_at": "2026-11-07",
+  "model": "gemini-3.5-flash-lite",
+  "pricing": {
+    "checked_on": "2026-11-07",
+    "source": "https://cloud.google.com/model-garden/pricing",
+    "currency": "USD",
+    "model": "gemini-3.5-flash-lite",
+    "location_tier": "global",
+    "input_usd_per_million_tokens": 0.15,
+    "output_usd_per_million_tokens": 1.25,
+    "note": "Token-price estimate only; excludes any applicable credits, taxes, or non-token charges. Recheck at evaluation time."
+  },
+  "runs": [
+    {
+      "case": "mostly-clear",
+      "trial": 1,
+      "player": "heuristic",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 0.006,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173514Z-heuristic-9ca53471.json"
+    },
+    {
+      "case": "mostly-clear",
+      "trial": 1,
+      "player": "vertex",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "model-call/time limit after failed call",
+        "score": 0,
+        "turn": 0,
+        "steps": 0,
+        "invalid_actions": 0,
+        "model_calls": 80,
+        "failed_model_calls": 80
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 0.683,
+        "model_calls": 80,
+        "failed_model_calls": 80,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": 0.008,
+        "max_call_latency_seconds": 0.62,
+        "failure": "TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError(\"HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173516Z-vertex-30184c8b.json"
+    },
+    {
+      "case": "mostly-clear",
+      "trial": 2,
+      "player": "heuristic",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173517Z-heuristic-85ae236e.json"
+    },
+    {
+      "case": "mostly-clear",
+      "trial": 2,
+      "player": "vertex",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "model-call/time limit after failed call",
+        "score": 0,
+        "turn": 0,
+        "steps": 0,
+        "invalid_actions": 0,
+        "model_calls": 80,
+        "failed_model_calls": 80
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 0.296,
+        "model_calls": 80,
+        "failed_model_calls": 80,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": 0.003,
+        "max_call_latency_seconds": 0.237,
+        "failure": "TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError(\"HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173517Z-vertex-5ba8872e.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 1,
+      "player": "heuristic",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173517Z-heuristic-79caf863.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 1,
+      "player": "vertex",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "model-call/time limit after failed call",
+        "score": 0,
+        "turn": 0,
+        "steps": 0,
+        "invalid_actions": 0,
+        "model_calls": 80,
+        "failed_model_calls": 80
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 0.282,
+        "model_calls": 80,
+        "failed_model_calls": 80,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": 0.003,
+        "max_call_latency_seconds": 0.224,
+        "failure": "TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError(\"HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173517Z-vertex-20051b4e.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 2,
+      "player": "heuristic",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173518Z-heuristic-cdd70421.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 2,
+      "player": "vertex",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "model-call/time limit after failed call",
+        "score": 0,
+        "turn": 0,
+        "steps": 0,
+        "invalid_actions": 0,
+        "model_calls": 80,
+        "failed_model_calls": 80
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 0.294,
+        "model_calls": 80,
+        "failed_model_calls": 80,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": 0.003,
+        "max_call_latency_seconds": 0.231,
+        "failure": "TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError(\"HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173518Z-vertex-d3cb4596.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 1,
+      "player": "heuristic",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0,
+        "turn": 10,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173518Z-heuristic-f7ca75d7.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 1,
+      "player": "vertex",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "model-call/time limit after failed call",
+        "score": 0,
+        "turn": 0,
+        "steps": 0,
+        "invalid_actions": 0,
+        "model_calls": 80,
+        "failed_model_calls": 80
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 0.284,
+        "model_calls": 80,
+        "failed_model_calls": 80,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": 0.003,
+        "max_call_latency_seconds": 0.225,
+        "failure": "TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError(\"HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173518Z-vertex-e0bc7501.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 2,
+      "player": "heuristic",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0,
+        "turn": 10,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173519Z-heuristic-807c7286.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 2,
+      "player": "vertex",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "model-call/time limit after failed call",
+        "score": 0,
+        "turn": 0,
+        "steps": 0,
+        "invalid_actions": 0,
+        "model_calls": 80,
+        "failed_model_calls": 80
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 0.3,
+        "model_calls": 80,
+        "failed_model_calls": 80,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": 0.004,
+        "max_call_latency_seconds": 0.225,
+        "failure": "TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError(\"HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T173519Z-vertex-5bf98cfc.json"
+    }
+  ]
+}

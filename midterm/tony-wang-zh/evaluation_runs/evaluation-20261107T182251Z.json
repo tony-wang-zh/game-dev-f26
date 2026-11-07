@@ -1,0 +1,198 @@
+{
+  "run_at": "2026-11-07T18:22:51.578051+00:00",
+  "game_version": "0.5.0",
+  "suite_declared_at": "2026-11-07",
+  "model": null,
+  "pricing": {
+    "checked_on": "2026-11-07",
+    "source": "https://cloud.google.com/model-garden/pricing",
+    "currency": "USD",
+    "model": "gemini-3.5-flash-lite",
+    "location_tier": "global",
+    "input_usd_per_million_tokens": 0.15,
+    "output_usd_per_million_tokens": 1.25,
+    "note": "Token-price estimate only; excludes any applicable credits, taxes, or non-token charges. Recheck at evaluation time."
+  },
+  "runs": [
+    {
+      "case": "mostly-clear",
+      "trial": 1,
+      "player": "heuristic",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "miles": 2040,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T182251Z-heuristic-c917effa.json"
+    },
+    {
+      "case": "mostly-clear",
+      "trial": 2,
+      "player": "heuristic",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "miles": 2040,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T182251Z-heuristic-f13a372b.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 1,
+      "player": "heuristic",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "miles": 2040,
+        "steps": 27,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T182251Z-heuristic-a755b2e2.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 2,
+      "player": "heuristic",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "miles": 2040,
+        "steps": 27,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T182251Z-heuristic-f5aab02a.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 1,
+      "player": "heuristic",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.998,
+        "turn": 10,
+        "miles": 2035.0,
+        "steps": 28,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T182251Z-heuristic-f7e544d6.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 2,
+      "player": "heuristic",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.998,
+        "turn": 10,
+        "miles": 2035.0,
+        "steps": 28,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 0.003,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T182251Z-heuristic-f069ea66.json"
+    }
+  ]
+}

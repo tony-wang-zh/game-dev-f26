@@ -1,0 +1,10 @@
+{
+  "checked_on": "2026-11-07",
+  "source": "https://cloud.google.com/model-garden/pricing",
+  "currency": "USD",
+  "model": "gemini-3.5-flash-lite",
+  "location_tier": "global",
+  "input_usd_per_million_tokens": 0.15,
+  "output_usd_per_million_tokens": 1.25,
+  "note": "Token-price estimate only; excludes any applicable credits, taxes, or non-token charges. Recheck at evaluation time."
+}

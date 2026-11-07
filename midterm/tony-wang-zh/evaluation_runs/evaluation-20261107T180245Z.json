@@ -1,0 +1,378 @@
+{
+  "run_at": "2026-11-07T18:02:45.232748+00:00",
+  "game_version": "0.5.0",
+  "suite_declared_at": "2026-11-07",
+  "model": "gemini-3.5-flash-lite",
+  "pricing": {
+    "checked_on": "2026-11-07",
+    "source": "https://cloud.google.com/model-garden/pricing",
+    "currency": "USD",
+    "model": "gemini-3.5-flash-lite",
+    "location_tier": "global",
+    "input_usd_per_million_tokens": 0.15,
+    "output_usd_per_million_tokens": 1.25,
+    "note": "Token-price estimate only; excludes any applicable credits, taxes, or non-token charges. Recheck at evaluation time."
+  },
+  "runs": [
+    {
+      "case": "mostly-clear",
+      "trial": 1,
+      "player": "heuristic",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "miles": 2040,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 0.004,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T180029Z-heuristic-f7a62b40.json"
+    },
+    {
+      "case": "mostly-clear",
+      "trial": 1,
+      "player": "vertex",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.875,
+        "turn": 10,
+        "miles": 1785.0,
+        "steps": 30,
+        "invalid_actions": 0,
+        "model_calls": 30,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 23.031,
+        "model_calls": 30,
+        "failed_model_calls": 0,
+        "input_tokens": 13447,
+        "output_tokens": 464,
+        "mean_call_latency_seconds": 0.767,
+        "max_call_latency_seconds": 1.216,
+        "failure": null,
+        "estimated_cost_usd": 0.00259705
+      },
+      "trace": "traces/20261107T180029Z-vertex-f6743315.json"
+    },
+    {
+      "case": "mostly-clear",
+      "trial": 2,
+      "player": "heuristic",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "miles": 2040,
+        "steps": 25,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 0.009,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T180052Z-heuristic-083cef47.json"
+    },
+    {
+      "case": "mostly-clear",
+      "trial": 2,
+      "player": "vertex",
+      "seed": 3,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.897,
+        "turn": 10,
+        "miles": 1830.0,
+        "steps": 29,
+        "invalid_actions": 0,
+        "model_calls": 29,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 3,
+        "elapsed_seconds": 22.86,
+        "model_calls": 29,
+        "failed_model_calls": 0,
+        "input_tokens": 12994,
+        "output_tokens": 418,
+        "mean_call_latency_seconds": 0.787,
+        "max_call_latency_seconds": 1.661,
+        "failure": null,
+        "estimated_cost_usd": 0.0024716
+      },
+      "trace": "traces/20261107T180053Z-vertex-5d756eaa.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 1,
+      "player": "heuristic",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "miles": 2040,
+        "steps": 27,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 0.008,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T180115Z-heuristic-61dae27b.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 1,
+      "player": "vertex",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.922,
+        "turn": 10,
+        "miles": 1881.0,
+        "steps": 27,
+        "invalid_actions": 0,
+        "model_calls": 27,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 19.175,
+        "model_calls": 27,
+        "failed_model_calls": 0,
+        "input_tokens": 12152,
+        "output_tokens": 424,
+        "mean_call_latency_seconds": 0.709,
+        "max_call_latency_seconds": 1.031,
+        "failure": null,
+        "estimated_cost_usd": 0.0023528
+      },
+      "trace": "traces/20261107T180116Z-vertex-cbda9f9f.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 2,
+      "player": "heuristic",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "arrived at Oregon City",
+        "score": 1,
+        "turn": 10,
+        "miles": 2040,
+        "steps": 27,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 0.009,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T180135Z-heuristic-900a0288.json"
+    },
+    {
+      "case": "mixed-events",
+      "trial": 2,
+      "player": "vertex",
+      "seed": 2,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.936,
+        "turn": 10,
+        "miles": 1909.0,
+        "steps": 29,
+        "invalid_actions": 0,
+        "model_calls": 29,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 2,
+        "elapsed_seconds": 29.155,
+        "model_calls": 29,
+        "failed_model_calls": 0,
+        "input_tokens": 13073,
+        "output_tokens": 449,
+        "mean_call_latency_seconds": 1.004,
+        "max_call_latency_seconds": 8.96,
+        "failure": null,
+        "estimated_cost_usd": 0.0025222
+      },
+      "trace": "traces/20261107T180135Z-vertex-aa9c74e2.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 1,
+      "player": "heuristic",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.998,
+        "turn": 10,
+        "miles": 2035.0,
+        "steps": 28,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 0.01,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T180204Z-heuristic-e83f53db.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 1,
+      "player": "vertex",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.894,
+        "turn": 10,
+        "miles": 1823.0,
+        "steps": 29,
+        "invalid_actions": 0,
+        "model_calls": 29,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 20.206,
+        "model_calls": 29,
+        "failed_model_calls": 0,
+        "input_tokens": 13083,
+        "output_tokens": 485,
+        "mean_call_latency_seconds": 0.696,
+        "max_call_latency_seconds": 1.058,
+        "failure": null,
+        "estimated_cost_usd": 0.0025687
+      },
+      "trace": "traces/20261107T180205Z-vertex-5dda5ac4.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 2,
+      "player": "heuristic",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.998,
+        "turn": 10,
+        "miles": 2035.0,
+        "steps": 28,
+        "invalid_actions": 0,
+        "model_calls": 0,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 0.011,
+        "model_calls": 0,
+        "failed_model_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "mean_call_latency_seconds": null,
+        "max_call_latency_seconds": null,
+        "failure": null,
+        "estimated_cost_usd": 0.0
+      },
+      "trace": "traces/20261107T180225Z-heuristic-47a05fc5.json"
+    },
+    {
+      "case": "rider-heavy",
+      "trial": 2,
+      "player": "vertex",
+      "seed": 5,
+      "outcome": {
+        "status": "terminal",
+        "reason": "ten-turn limit",
+        "score": 0.924,
+        "turn": 10,
+        "miles": 1885.0,
+        "steps": 27,
+        "invalid_actions": 0,
+        "model_calls": 27,
+        "failed_model_calls": 0
+      },
+      "metrics": {
+        "seed": 5,
+        "elapsed_seconds": 19.653,
+        "model_calls": 27,
+        "failed_model_calls": 0,
+        "input_tokens": 12132,
+        "output_tokens": 420,
+        "mean_call_latency_seconds": 0.727,
+        "max_call_latency_seconds": 1.085,
+        "failure": null,
+        "estimated_cost_usd": 0.0023448
+      },
+      "trace": "traces/20261107T180225Z-vertex-574c944e.json"
+    }
+  ]
+}
