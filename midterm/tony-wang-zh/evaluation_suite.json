@@ -1,0 +1,16 @@
+{
+  "declared_at": "2026-11-07",
+  "model_player": "Vertex AI using the model in google_cloud_info.json",
+  "trials_per_situation": 2,
+  "step_limit_travel_turns": 10,
+  "model_call_limit_per_episode": 80,
+  "episode_time_limit_seconds": 300,
+  "situations": [
+    {"id": "mostly-clear", "seed": 3, "description": "Mostly clear trail with a small number of delays."},
+    {"id": "mixed-events", "seed": 2, "description": "Mixed rain, breakdown, helpful, and rider events."},
+    {"id": "rider-heavy", "seed": 5, "description": "Several rider encounters and other adverse events."}
+  ],
+  "held_out": [
+    {"id": "held-out-mix", "seed": 4, "description": "Reserved mixed encounter sequence; do not use for prompt changes."}
+  ]
+}

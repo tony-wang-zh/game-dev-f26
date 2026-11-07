@@ -1,0 +1,12 @@
+[project]
+name = "oregon-trail-midterm"
+version = "0.1.0"
+description = "Bounded Oregon Trail reconstruction and player-agent experiment"
+requires-python = ">=3.11"
+dependencies = [
+    "questionary>=2.0,<3",
+    "google-genai>=1.0,<3",
+]
+
+[tool.uv]
+package = false

@@ -1,0 +1,9 @@
+{
+  "provider": "vertex",
+  "model_config_path": "google_cloud_info.json",
+  "player_prompt": "skills/oregon-trail-player.md",
+  "max_calls_per_episode": 80,
+  "max_episode_seconds": 300,
+  "per_call_timeout_seconds": 35,
+  "invalid_action_limit": 2
+}

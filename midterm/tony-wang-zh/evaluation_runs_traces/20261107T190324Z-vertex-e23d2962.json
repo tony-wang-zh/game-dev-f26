@@ -1,0 +1,1495 @@
+{
+  "player": "vertex",
+  "started_at": "2026-11-07T19:03:24.896703+00:00",
+  "game_version": "0.5.0",
+  "events": [
+    {
+      "timestamp": "2026-11-07T19:03:26.168098+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "initial_purchase",
+        "turn": 0,
+        "turn_limit": 10,
+        "miles": 0.0,
+        "miles_remaining": 2040.0,
+        "stats": {
+          "cash": 700.0,
+          "oxen": 0.0,
+          "food": 0.0,
+          "bullets": 0.0,
+          "clothing": 0.0,
+          "supplies": 0.0
+        },
+        "fort_available": true,
+        "result": ""
+      },
+      "legal_actions": [
+        {
+          "type": "buy",
+          "item": "oxen",
+          "min": 200,
+          "max": 300
+        }
+      ],
+      "action": {
+        "type": "buy",
+        "item": "oxen",
+        "amount": 250
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "Purchased oxen for $250. Remaining cash: $450."
+      },
+      "model": {
+        "elapsed_seconds": 1.2710779590415768,
+        "input_tokens": 426,
+        "output_tokens": 29,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:27.144133+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "initial_purchase",
+        "turn": 0,
+        "turn_limit": 10,
+        "miles": 0.0,
+        "miles_remaining": 2040.0,
+        "stats": {
+          "cash": 450.0,
+          "oxen": 250.0,
+          "food": 0.0,
+          "bullets": 0.0,
+          "clothing": 0.0,
+          "supplies": 0.0
+        },
+        "fort_available": true,
+        "result": "Purchased oxen for $250. Remaining cash: $450."
+      },
+      "legal_actions": [
+        {
+          "type": "buy",
+          "item": "food",
+          "min": 0,
+          "max": 450
+        }
+      ],
+      "action": {
+        "type": "buy",
+        "item": "food",
+        "amount": 200
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "Purchased food for $200. Remaining cash: $250."
+      },
+      "model": {
+        "elapsed_seconds": 0.9756508329883218,
+        "input_tokens": 441,
+        "output_tokens": 28,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:27.805409+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "initial_purchase",
+        "turn": 0,
+        "turn_limit": 10,
+        "miles": 0.0,
+        "miles_remaining": 2040.0,
+        "stats": {
+          "cash": 250.0,
+          "oxen": 250.0,
+          "food": 200.0,
+          "bullets": 0.0,
+          "clothing": 0.0,
+          "supplies": 0.0
+        },
+        "fort_available": true,
+        "result": "Purchased food for $200. Remaining cash: $250."
+      },
+      "legal_actions": [
+        {
+          "type": "buy",
+          "item": "ammunition",
+          "min": 0,
+          "max": 250
+        }
+      ],
+      "action": {
+        "type": "buy",
+        "item": "ammunition",
+        "amount": 50
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "Purchased ammunition for $50. Remaining cash: $200."
+      },
+      "model": {
+        "elapsed_seconds": 0.6608096669660881,
+        "input_tokens": 445,
+        "output_tokens": 29,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:28.418971+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "initial_purchase",
+        "turn": 0,
+        "turn_limit": 10,
+        "miles": 0.0,
+        "miles_remaining": 2040.0,
+        "stats": {
+          "cash": 200.0,
+          "oxen": 250.0,
+          "food": 200.0,
+          "bullets": 2500.0,
+          "clothing": 0.0,
+          "supplies": 0.0
+        },
+        "fort_available": true,
+        "result": "Purchased ammunition for $50. Remaining cash: $200."
+      },
+      "legal_actions": [
+        {
+          "type": "buy",
+          "item": "clothing",
+          "min": 0,
+          "max": 200
+        }
+      ],
+      "action": {
+        "type": "buy",
+        "item": "clothing",
+        "amount": 20
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "Purchased clothing for $20. Remaining cash: $180."
+      },
+      "model": {
+        "elapsed_seconds": 0.6126385410316288,
+        "input_tokens": 445,
+        "output_tokens": 27,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:29.136530+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "initial_purchase",
+        "turn": 0,
+        "turn_limit": 10,
+        "miles": 0.0,
+        "miles_remaining": 2040.0,
+        "stats": {
+          "cash": 180.0,
+          "oxen": 250.0,
+          "food": 200.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 0.0
+        },
+        "fort_available": true,
+        "result": "Purchased clothing for $20. Remaining cash: $180."
+      },
+      "legal_actions": [
+        {
+          "type": "buy",
+          "item": "supplies",
+          "min": 0,
+          "max": 180
+        }
+      ],
+      "action": {
+        "type": "buy",
+        "item": "supplies",
+        "amount": 100
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "Purchased supplies for $100. Remaining cash: $80. The journey begins."
+      },
+      "model": {
+        "elapsed_seconds": 0.7167462920187972,
+        "input_tokens": 447,
+        "output_tokens": 21,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:29.854012+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 0,
+        "turn_limit": 10,
+        "miles": 0.0,
+        "miles_remaining": 2040.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 200.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 100.0
+        },
+        "fort_available": true,
+        "result": "Purchased supplies for $100. Remaining cash: $80. The journey begins."
+      },
+      "legal_actions": [
+        {
+          "type": "visit_fort"
+        },
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "continue"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You continued along the trail. Choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.7163680829689838,
+        "input_tokens": 444,
+        "output_tokens": 6,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:30.670668+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 1,
+        "turn_limit": 10,
+        "miles": 211.0,
+        "miles_remaining": 1829.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 200.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 100.0
+        },
+        "fort_available": false,
+        "result": "You continued along the trail. Choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 2,
+        "name": "moderately"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 18 food. Heavy rain damaged food and supplies and delayed the wagon."
+      },
+      "model": {
+        "elapsed_seconds": 0.8157926670392044,
+        "input_tokens": 474,
+        "output_tokens": 19,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:31.246237+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 1,
+        "turn_limit": 10,
+        "miles": 201.0,
+        "miles_remaining": 1839.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 172.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 98.0
+        },
+        "fort_available": false,
+        "result": "You ate 18 food. Heavy rain damaged food and supplies and delayed the wagon."
+      },
+      "legal_actions": [
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "continue"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You continued along the trail. Choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.5751084170187823,
+        "input_tokens": 435,
+        "output_tokens": 11,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:32.003851+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 2,
+        "turn_limit": 10,
+        "miles": 412.0,
+        "miles_remaining": 1628.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 172.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 98.0
+        },
+        "fort_available": true,
+        "result": "You continued along the trail. Choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 2,
+        "name": "moderately"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 18 food. A wagon part broke; repairs used 5 supplies and cost time."
+      },
+      "model": {
+        "elapsed_seconds": 0.7571261670091189,
+        "input_tokens": 473,
+        "output_tokens": 19,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:32.910145+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 2,
+        "turn_limit": 10,
+        "miles": 397.0,
+        "miles_remaining": 1643.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 154.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 93.0
+        },
+        "fort_available": true,
+        "result": "You ate 18 food. A wagon part broke; repairs used 5 supplies and cost time."
+      },
+      "legal_actions": [
+        {
+          "type": "visit_fort"
+        },
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "continue"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You continued along the trail. Choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.9056507920031436,
+        "input_tokens": 446,
+        "output_tokens": 6,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:33.642793+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 3,
+        "turn_limit": 10,
+        "miles": 608.0,
+        "miles_remaining": 1432.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 154.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 93.0
+        },
+        "fort_available": false,
+        "result": "You continued along the trail. Choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 2,
+        "name": "moderately"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 18 food. A wagon part broke; repairs used 5 supplies and cost time."
+      },
+      "model": {
+        "elapsed_seconds": 0.7316498750005849,
+        "input_tokens": 473,
+        "output_tokens": 19,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:34.255488+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 3,
+        "turn_limit": 10,
+        "miles": 593.0,
+        "miles_remaining": 1447.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 136.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 88.0
+        },
+        "fort_available": false,
+        "result": "You ate 18 food. A wagon part broke; repairs used 5 supplies and cost time."
+      },
+      "legal_actions": [
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "continue"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You continued along the trail. Choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.6117311249836348,
+        "input_tokens": 438,
+        "output_tokens": 6,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:34.826988+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 4,
+        "turn_limit": 10,
+        "miles": 804.0,
+        "miles_remaining": 1236.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 136.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 88.0
+        },
+        "fort_available": true,
+        "result": "You continued along the trail. Choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 2
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 18 food. "
+      },
+      "model": {
+        "elapsed_seconds": 0.5708313749637455,
+        "input_tokens": 473,
+        "output_tokens": 18,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:35.587972+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "event_response",
+        "turn": 4,
+        "turn_limit": 10,
+        "miles": 804.0,
+        "miles_remaining": 1236.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 118.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 88.0
+        },
+        "fort_available": true,
+        "result": "You ate 18 food. ",
+        "event": {
+          "name": "riders",
+          "description": "Riders approach. Choose how to respond."
+        }
+      },
+      "legal_actions": [
+        {
+          "type": "rider_response",
+          "choice": "run"
+        },
+        {
+          "type": "rider_response",
+          "choice": "stand_ground"
+        },
+        {
+          "type": "rider_response",
+          "choice": "circle_wagons"
+        }
+      ],
+      "action": {
+        "type": "rider_response",
+        "choice": "circle_wagons"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You circled the wagons, using supplies and time."
+      },
+      "model": {
+        "elapsed_seconds": 0.7601150419795886,
+        "input_tokens": 486,
+        "output_tokens": 17,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:36.203673+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 4,
+        "turn_limit": 10,
+        "miles": 794.0,
+        "miles_remaining": 1246.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 118.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 85.0
+        },
+        "fort_available": true,
+        "result": "You circled the wagons, using supplies and time."
+      },
+      "legal_actions": [
+        {
+          "type": "visit_fort"
+        },
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "continue"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You continued along the trail. Choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.6145389580051415,
+        "input_tokens": 435,
+        "output_tokens": 6,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:36.918503+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 5,
+        "turn_limit": 10,
+        "miles": 1005.0,
+        "miles_remaining": 1035.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 118.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 85.0
+        },
+        "fort_available": false,
+        "result": "You continued along the trail. Choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 2,
+        "name": "moderately"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 18 food. A wagon part broke; repairs used 5 supplies and cost time."
+      },
+      "model": {
+        "elapsed_seconds": 0.7131282080081291,
+        "input_tokens": 474,
+        "output_tokens": 19,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:37.637265+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 5,
+        "turn_limit": 10,
+        "miles": 990.0,
+        "miles_remaining": 1050.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 100.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 80.0
+        },
+        "fort_available": false,
+        "result": "You ate 18 food. A wagon part broke; repairs used 5 supplies and cost time."
+      },
+      "legal_actions": [
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "continue"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You continued along the trail. Choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.7178475830005482,
+        "input_tokens": 438,
+        "output_tokens": 6,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:38.354012+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 6,
+        "turn_limit": 10,
+        "miles": 1201.0,
+        "miles_remaining": 839.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 100.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 80.0
+        },
+        "fort_available": true,
+        "result": "You continued along the trail. Choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 2,
+        "name": "moderately"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 18 food. "
+      },
+      "model": {
+        "elapsed_seconds": 0.7148618329665624,
+        "input_tokens": 473,
+        "output_tokens": 19,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:38.967014+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "event_response",
+        "turn": 6,
+        "turn_limit": 10,
+        "miles": 1201.0,
+        "miles_remaining": 839.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 82.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 80.0
+        },
+        "fort_available": true,
+        "result": "You ate 18 food. ",
+        "event": {
+          "name": "riders",
+          "description": "Riders approach. Choose how to respond."
+        }
+      },
+      "legal_actions": [
+        {
+          "type": "rider_response",
+          "choice": "run"
+        },
+        {
+          "type": "rider_response",
+          "choice": "stand_ground"
+        },
+        {
+          "type": "rider_response",
+          "choice": "circle_wagons"
+        }
+      ],
+      "action": {
+        "type": "rider_response",
+        "choice": "circle_wagons"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You circled the wagons, using supplies and time."
+      },
+      "model": {
+        "elapsed_seconds": 0.6112042079912499,
+        "input_tokens": 485,
+        "output_tokens": 17,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:39.787205+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 6,
+        "turn_limit": 10,
+        "miles": 1191.0,
+        "miles_remaining": 849.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 82.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 77.0
+        },
+        "fort_available": true,
+        "result": "You circled the wagons, using supplies and time."
+      },
+      "legal_actions": [
+        {
+          "type": "visit_fort"
+        },
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "continue"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You continued along the trail. Choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.8187881669728085,
+        "input_tokens": 434,
+        "output_tokens": 6,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:40.380757+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 7,
+        "turn_limit": 10,
+        "miles": 1402.0,
+        "miles_remaining": 638.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 82.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 77.0
+        },
+        "fort_available": false,
+        "result": "You continued along the trail. Choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 1,
+        "name": "poorly"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 13 food. The weather stayed clear."
+      },
+      "model": {
+        "elapsed_seconds": 0.5915566660114564,
+        "input_tokens": 472,
+        "output_tokens": 19,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:41.016591+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 7,
+        "turn_limit": 10,
+        "miles": 1402.0,
+        "miles_remaining": 638.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 69.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 77.0
+        },
+        "fort_available": false,
+        "result": "You ate 13 food. The weather stayed clear."
+      },
+      "legal_actions": [
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "continue"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You continued along the trail. Choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.634189916017931,
+        "input_tokens": 428,
+        "output_tokens": 11,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:41.732162+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 8,
+        "turn_limit": 10,
+        "miles": 1613.0,
+        "miles_remaining": 427.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 69.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 77.0
+        },
+        "fort_available": true,
+        "result": "You continued along the trail. Choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 1,
+        "name": "poorly"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 13 food. Heavy rain damaged food and supplies and delayed the wagon."
+      },
+      "model": {
+        "elapsed_seconds": 0.7139630829915404,
+        "input_tokens": 472,
+        "output_tokens": 19,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:42.370846+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 8,
+        "turn_limit": 10,
+        "miles": 1603.0,
+        "miles_remaining": 437.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 46.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 75.0
+        },
+        "fort_available": true,
+        "result": "You ate 13 food. Heavy rain damaged food and supplies and delayed the wagon."
+      },
+      "legal_actions": [
+        {
+          "type": "visit_fort"
+        },
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "visit_fort"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You reached a fort. Time on the trail was lost; choose supplies to buy."
+      },
+      "model": {
+        "elapsed_seconds": 0.6372196250013076,
+        "input_tokens": 442,
+        "output_tokens": 13,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:42.996659+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "fort_purchase",
+        "turn": 9,
+        "turn_limit": 10,
+        "miles": 1769.0,
+        "miles_remaining": 271.0,
+        "stats": {
+          "cash": 80.0,
+          "oxen": 250.0,
+          "food": 46.0,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 75.0
+        },
+        "fort_available": false,
+        "result": "You reached a fort. Time on the trail was lost; choose supplies to buy."
+      },
+      "legal_actions": [
+        {
+          "type": "buy",
+          "item": "food",
+          "min": 0,
+          "max": 80
+        },
+        {
+          "type": "finish_fort"
+        }
+      ],
+      "action": {
+        "type": "buy",
+        "item": "food",
+        "amount": 40
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "Purchased food; remaining cash: $40."
+      },
+      "model": {
+        "elapsed_seconds": 0.6240992920356803,
+        "input_tokens": 456,
+        "output_tokens": 19,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:43.778182+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "fort_purchase",
+        "turn": 9,
+        "turn_limit": 10,
+        "miles": 1769.0,
+        "miles_remaining": 271.0,
+        "stats": {
+          "cash": 40.0,
+          "oxen": 250.0,
+          "food": 72.7,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 75.0
+        },
+        "fort_available": false,
+        "result": "Purchased food; remaining cash: $40."
+      },
+      "legal_actions": [
+        {
+          "type": "buy",
+          "item": "ammunition",
+          "min": 0,
+          "max": 40
+        },
+        {
+          "type": "finish_fort"
+        }
+      ],
+      "action": {
+        "type": "finish_fort"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You leave the fort and choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.7809934159740806,
+        "input_tokens": 452,
+        "output_tokens": 8,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:44.500339+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 9,
+        "turn_limit": 10,
+        "miles": 1769.0,
+        "miles_remaining": 271.0,
+        "stats": {
+          "cash": 40.0,
+          "oxen": 250.0,
+          "food": 72.7,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 75.0
+        },
+        "fort_available": false,
+        "result": "You leave the fort and choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 1,
+        "name": "poorly"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 13 food. "
+      },
+      "model": {
+        "elapsed_seconds": 0.7214580419822596,
+        "input_tokens": 471,
+        "output_tokens": 28,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:45.156776+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "event_response",
+        "turn": 9,
+        "turn_limit": 10,
+        "miles": 1769.0,
+        "miles_remaining": 271.0,
+        "stats": {
+          "cash": 40.0,
+          "oxen": 250.0,
+          "food": 59.7,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 75.0
+        },
+        "fort_available": false,
+        "result": "You ate 13 food. ",
+        "event": {
+          "name": "riders",
+          "description": "Riders approach. Choose how to respond."
+        }
+      },
+      "legal_actions": [
+        {
+          "type": "rider_response",
+          "choice": "run"
+        },
+        {
+          "type": "rider_response",
+          "choice": "stand_ground"
+        },
+        {
+          "type": "rider_response",
+          "choice": "circle_wagons"
+        }
+      ],
+      "action": {
+        "type": "rider_response",
+        "choice": "circle_wagons"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You circled the wagons, using supplies and time."
+      },
+      "model": {
+        "elapsed_seconds": 0.6548081249929965,
+        "input_tokens": 485,
+        "output_tokens": 24,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:46.013542+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "travel",
+        "turn": 9,
+        "turn_limit": 10,
+        "miles": 1759.0,
+        "miles_remaining": 281.0,
+        "stats": {
+          "cash": 40.0,
+          "oxen": 250.0,
+          "food": 59.7,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 72.0
+        },
+        "fort_available": false,
+        "result": "You circled the wagons, using supplies and time."
+      },
+      "legal_actions": [
+        {
+          "type": "continue"
+        },
+        {
+          "type": "hunt"
+        }
+      ],
+      "action": {
+        "type": "continue"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You continued along the trail. Choose today's ration."
+      },
+      "model": {
+        "elapsed_seconds": 0.8552588750026189,
+        "input_tokens": 426,
+        "output_tokens": 6,
+        "model": "gemini-3.5-flash-lite"
+      }
+    },
+    {
+      "timestamp": "2026-11-07T19:03:46.751146+00:00",
+      "observation": {
+        "player": "Oregon Trail traveler",
+        "phase": "ration",
+        "turn": 10,
+        "turn_limit": 10,
+        "miles": 1970.0,
+        "miles_remaining": 70.0,
+        "stats": {
+          "cash": 40.0,
+          "oxen": 250.0,
+          "food": 59.7,
+          "bullets": 2500.0,
+          "clothing": 20.0,
+          "supplies": 72.0
+        },
+        "fort_available": true,
+        "result": "You continued along the trail. Choose today's ration."
+      },
+      "legal_actions": [
+        {
+          "type": "eat",
+          "level": 1,
+          "name": "poorly"
+        },
+        {
+          "type": "eat",
+          "level": 2,
+          "name": "moderately"
+        },
+        {
+          "type": "eat",
+          "level": 3,
+          "name": "well"
+        }
+      ],
+      "action": {
+        "type": "eat",
+        "level": 2,
+        "name": "moderately"
+      },
+      "accepted": true,
+      "result": {
+        "accepted": true,
+        "message": "You ate 18 food. Heavy rain damaged food and supplies and delayed the wagon."
+      },
+      "model": {
+        "elapsed_seconds": 0.7359262499958277,
+        "input_tokens": 472,
+        "output_tokens": 28,
+        "model": "gemini-3.5-flash-lite"
+      }
+    }
+  ],
+  "finished_at": "2026-11-07T19:03:46.753297+00:00",
+  "outcome": {
+    "status": "terminal",
+    "reason": "ten-turn limit",
+    "score": 0.961,
+    "turn": 10,
+    "miles": 1960.0,
+    "steps": 30,
+    "invalid_actions": 0,
+    "model_calls": 30,
+    "failed_model_calls": 0
+  },
+  "metrics": {
+    "seed": 5,
+    "elapsed_seconds": 21.857,
+    "model_calls": 30,
+    "failed_model_calls": 0,
+    "input_tokens": 13661,
+    "output_tokens": 503,
+    "mean_call_latency_seconds": 0.727,
+    "max_call_latency_seconds": 1.271,
+    "failure": null
+  }
+}

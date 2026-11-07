@@ -1,0 +1,38 @@
+name: Midterm - tony-wang-zh
+
+on:
+  pull_request:
+    paths:
+      - 'midterm/tony-wang-zh/**'
+      - '.github/workflows/midterm-tony-wang-zh.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: midterm-tony-wang-zh-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deterministic-checks:
+    name: Deterministic tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python and uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+          enable-cache: true
+          cache-dependency-glob: midterm/tony-wang-zh/uv.lock
+
+      - name: Install project dependencies
+        working-directory: midterm/tony-wang-zh
+        run: uv sync --frozen
+
+      - name: Run deterministic game and player tests
+        working-directory: midterm/tony-wang-zh
+        run: uv run --frozen python -m unittest discover -s tests -v
